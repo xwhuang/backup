@@ -1,0 +1,44 @@
+ #+TITLE: ［样本］
+#+AUTHOR: ［Lzay］
+  #+DATE:  2016-03-24
+#+STARTUP: overview
+#+OPTIONS:
+#+OPTIONS: H:4 num:4 TeX:t LaTeX:t toc:t
+#+LATEX_CLASS: article
+# Latex options: twoside,twocolumn,titlepage
+#+LaTeX_CLASS_OPTIONS: [a4paper,UTF8]
+#+LATEX_HEADER: \usepackage{fullpage}
+#+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{positioning,backgrounds,calc,shadings,shapes,shapes.arrows,shapes.symbols,shadows}
+#+LATEX_HEADER: \usetikzlibrary{arrows, decorations.markings}
+#+LATEX_HEADER: \usepackage{pgfplots}
+#+LATEX_HEADER: \usepackage{balance}
+#+LATEX_HEADER: \usepackage{lipsum}
+#+LATEX_HEADER: \usepackage[compact]{}
+#+LATEX_HEADER: \usepackage{dblfloatfix}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage[justification=centering]{caption}
+#+LATEX: \newcommand{\fsfortytwo}{\fontsize{42pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\fsthirtysix}{\fontsize{36pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\fstwentyeight}{\fontsize{28pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\fstwenty}{\fontsize{20pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\fseighteen}{\fontsize{18pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\fssixteen}{\fontsize{16pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\fsten}{\fontsize{10pt}{\baselineskip}\selectfont}
+#+LATEX: \newcommand{\HRule}{\rule{\linewidth}{1.5mm}}
+#+LATEX: \newcommand{\hRule}{\rule{\linewidth}{1.0mm}}
+#+LATEX: \clearpage
+#+LATEX: \setcounter{page}{1}
+#+LATEX: \newpage
+
+* 标题一
+  #+BEGIN_LATEX
+  This is a circle with radius equals 2cm!
+  这是一个半径为2cm的圆！
+  \tikz \draw[color=blue, very thick] (0,0) circle[radius=2cm];
+  #+END_LATEX
