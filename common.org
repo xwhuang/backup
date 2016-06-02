@@ -7,8 +7,12 @@
 #+LATEX_CLASS: article
 # Latex options: twoside,twocolumn,titlepage
 #+LaTeX_CLASS_OPTIONS: [a4paper,UTF8]
+#+LATEX_HEADER: \usepackage{listings} 
 #+LATEX_HEADER: \usepackage{fullpage}
 #+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{tablestyles}
+#+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{multicol}
 #+LATEX_HEADER: \usepackage{graphicx}
 #+LATEX_HEADER: \usepackage{enumitem}
@@ -23,15 +27,9 @@
 #+LATEX_HEADER: \usepackage{dblfloatfix}
 #+LATEX_HEADER: \usepackage{float}
 #+LATEX_HEADER: \usepackage[justification=centering]{caption}
-#+LATEX: \newcommand{\fsfortytwo}{\fontsize{42pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\fsthirtysix}{\fontsize{36pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\fstwentyeight}{\fontsize{28pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\fstwenty}{\fontsize{20pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\fseighteen}{\fontsize{18pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\fssixteen}{\fontsize{16pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\fsten}{\fontsize{10pt}{\baselineskip}\selectfont}
-#+LATEX: \newcommand{\HRule}{\rule{\linewidth}{1.5mm}}
-#+LATEX: \newcommand{\hRule}{\rule{\linewidth}{1.0mm}}
+#+LATEX_HEADER: \usepackage{indentfirst} 
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage{framed}
 #+LATEX: \clearpage
 #+LATEX: \setcounter{page}{1}
 #+LATEX: \newpage
@@ -41,4 +39,90 @@
   This is a circle with radius equals 2cm!
   这是一个半径为2cm的圆！
   \tikz \draw[color=blue, very thick] (0,0) circle[radius=2cm];
+  #+END_LATEX
+
+* math
+  #+BEGIN_LATEX
+  \[
+  \binom{a}{b + c} \binom{\frac{n^{2} - 1}{2}}{n + 1}
+  \]
+
+  \[
+  \begin{vmatrix}
+  a_{11} & a_{12} & a_{13} & \cdots & a_{1n} \\
+  a_{21} & a_{22} & a_{23} & \cdots & a_{2n} \\
+  a_{31} & a_{32} & a_{33} & \cdots & a_{3n} \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  a_{n1} & a_{n2} & a_{n3} & \cdots & a_{nn} \\
+  \end{vmatrix}  
+  \]
+
+  \[
+  \mathbf{A} = 
+  \begin{pmatrix}
+  a_{11} & a_{12} & a_{13} & \cdots & a_{1n} \\
+  a_{21} & a_{22} & a_{23} & \cdots & a_{2n} \\
+  a_{31} & a_{32} & a_{33} & \cdots & a_{3n} \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  a_{n1} & a_{n2} & a_{n3} & \cdots & a_{nn} \\
+  \end{pmatrix}  
+  \]
+  
+  \[
+  f(x)=
+  \begin{cases}
+  -x^{2},     & \text{if $x < 0$;}\\
+  \alpha + x, & \text{if $0 \leq x \leq 1$;}\\
+  x^{2},      & \text{otherwise.}
+  \end{cases}
+  \]
+  #+END_LATEX
+
+* reference
+  #+BEGIN_LATEX
+  \begin{thebibliography}{9}
+     \bibitem{sF90}
+        Soo-Key Foo, \emph{Lattice constructions}, Ph.D. thesis,
+        University of Winnebago, Winnebago MN, December 1990.
+     \bibitem{gM68}
+        George~A. Menuhin, \emph{Universal Algebra}, D.~van Nostrand,
+        Princeton-Toronto-London-Mel\-bourne, 1968.
+     \bibitem{eM57}
+        Ernest~T. Moynahan, \emph{On a problem of M.~H. Stone}, Acta
+        Math. Acad. Sci. Hungar. \textbf{8} (1957), 455--460.
+     \bibitem{eM57a}
+        Ernest~T. Moynahan, \emph{Ideals and congruence relations in
+        lattices. II}, Magyar Tud. Akad. Mat. Fiz. Oszt. K\"{o}zl.
+        \textbf{9} (1957), 417--434.
+
+     \bibitem{one}
+        Soo-Key Foo, \emph{Lattice constructions}, Ph.D. thesis,
+        University of Winnebago, Winnebago MN, December 1990.
+     \bibitem{two}
+        George~A. Menuhin, \emph{Universal Algebra}, D.~van Nostrand,
+        Princeton-Toronto-London-Mel\-bourne, 1968.
+     \bibitem{three}
+        Ernest~T. Moynahan, \emph{On a problem of M.~H. Stone}, Acta
+        Math. Acad. Sci. Hungar. \textbf{8} (1957), 455--460.
+     \bibitem{four}
+        Ernest~T. Moynahan, \emph{Ideals and congruence relations in
+        lattices. II}, Magyar Tud. Akad. Mat. Fiz. Oszt. K\"{o}zl.
+        \textbf{9} (1957), 417--434.
+
+     \bibitem{five}
+        Soo-Key Foo, \emph{Lattice constructions}, Ph.D. thesis,
+        University of Winnebago, Winnebago MN, December 1990.
+     \bibitem{six}
+        George~A. Menuhin, \emph{Universal Algebra}, D.~van Nostrand,
+        Princeton-Toronto-London-Mel\-bourne, 1968.
+     \bibitem{seven}
+        Ernest~T. Moynahan, \emph{On a problem of M.~H. Stone}, Acta
+        Math. Acad. Sci. Hungar. \textbf{8} (1957), 455--460.
+     \bibitem{eight}
+        Ernest~T. Moynahan, \emph{Ideals and congruence relations in
+        lattices. II}, Magyar Tud. Akad. Mat. Fiz. Oszt. K\"{o}zl.
+        \textbf{9} (1957), 417--434.
+
+  \end{thebibliography}
+
   #+END_LATEX
